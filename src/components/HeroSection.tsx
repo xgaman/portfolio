@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { profileData } from '@/data/profileData';
+import { profile } from '@/data/profile';
 import { NeonText } from './NeonText';
 import { NeonButton } from './NeonButton';
 import { Typewriter } from './Typewriter';
@@ -40,7 +40,7 @@ export const HeroSection = () => {
             className="mb-6"
           >
             <NeonText size="3xl" color="gradient" animate>
-              {profileData.name.toUpperCase()}
+              {profile.name.toUpperCase()}
             </NeonText>
           </motion.div>
 
@@ -52,7 +52,7 @@ export const HeroSection = () => {
             className="mb-8"
           >
             <Typewriter 
-              texts={profileData.taglines} 
+              texts={profile.taglines} 
               className="text-xl md:text-2xl"
             />
           </motion.div>
@@ -64,7 +64,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-12 font-inter leading-relaxed"
           >
-            {profileData.bio}
+            {profile.bio}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -91,7 +91,7 @@ export const HeroSection = () => {
             </NeonButton>
             
             <a 
-              href={profileData.github} 
+              href={profile.github} 
               target="_blank" 
               rel="noopener noreferrer"
             >

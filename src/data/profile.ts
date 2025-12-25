@@ -1,5 +1,7 @@
-// ✏️ EDIT YOUR DETAILS HERE
-// This is the single source of truth for all your portfolio content
+// ============================================================
+// ✏️ EDIT ONLY THIS FILE TO UPDATE YOUR PORTFOLIO CONTENT
+// All sections of the website pull data from this single file
+// ============================================================
 
 export interface Project {
   id: string;
@@ -14,8 +16,7 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  level: number; // 0-100
-  icon?: string;
+  level: number; // 0-100 (percentage for progress bar)
 }
 
 export interface TimelineItem {
@@ -27,52 +28,48 @@ export interface TimelineItem {
   type: 'education' | 'experience';
 }
 
-export interface ProfileData {
-  name: string;
-  firstName: string;
-  lastName: string;
-  taglines: string[];
-  education: string;
-  experience: string;
-  bio: string;
-  email: string;
-  github: string;
-  linkedin?: string;
-  twitter?: string;
-  skills: Skill[];
-  projects: Project[];
-  timeline: TimelineItem[];
-}
+// ============================================================
+// ✏️ MAIN PROFILE DATA - EDIT YOUR DETAILS BELOW
+// ============================================================
 
-// ✏️ UPDATE THIS OBJECT TO CHANGE YOUR PORTFOLIO CONTENT
-export const profileData: ProfileData = {
+export const profile = {
+  // ✏️ Personal Info
   name: "Amanshu Sharma",
   firstName: "Amanshu",
   lastName: "Sharma",
+  
+  // ✏️ Taglines (shown as rotating text in hero)
   taglines: [
     "Computer Engineering Student",
     "Web Developer",
     "Python Programmer",
     "Creative Coder"
   ],
+  
+  // ✏️ Bio (shown in hero section)
+  bio: "Passionate about creating innovative web experiences and exploring the intersection of technology and creativity. Currently pursuing my diploma while building projects that push boundaries.",
+  
+  // ✏️ Education & Experience Summary
   education: "Diploma in Computer Engineering",
   experience: "Fresher",
-  bio: "Passionate about creating innovative web experiences and exploring the intersection of technology and creativity. Currently pursuing my diploma while building projects that push boundaries.",
+  
+  // ✏️ Contact & Social Links
   email: "contact@example.com",
   github: "https://github.com/amanshu999",
-  linkedin: "",
-  twitter: "",
+  linkedin: "", // Leave empty if not available
+  twitter: "",  // Leave empty if not available
   
-  // ✏️ UPDATE YOUR SKILLS HERE (level is 0-100)
+  // ✏️ SKILLS - Add/remove skills here (level: 0-100)
   skills: [
     { name: "HTML", level: 85 },
     { name: "CSS", level: 80 },
     { name: "JavaScript", level: 75 },
     { name: "Python", level: 70 }
-  ],
+  ] as Skill[],
   
-  // ✏️ ADD YOUR PROJECTS HERE
-  // Each project will automatically render as a card
+  // ✏️ PROJECTS - Add your projects here
+  // Each project will auto-render as a card
+  // Set status: 'completed' | 'in-progress' | 'coming-soon'
   projects: [
     {
       id: "1",
@@ -95,9 +92,9 @@ export const profileData: ProfileData = {
       techStack: ["React", "Node.js"],
       status: "coming-soon"
     }
-  ],
+  ] as Project[],
   
-  // ✏️ UPDATE YOUR TIMELINE HERE
+  // ✏️ TIMELINE - Education & Experience entries
   timeline: [
     {
       id: "1",
@@ -115,5 +112,22 @@ export const profileData: ProfileData = {
       description: "Eager to apply my skills in a professional environment and contribute to innovative projects.",
       type: "experience"
     }
-  ]
+  ] as TimelineItem[]
 };
+
+// ============================================================
+// 🔧 EXAMPLE: HOW TO ADD A NEW PROJECT
+// ============================================================
+// Just add a new object to the projects array above:
+//
+// {
+//   id: "4",
+//   title: "My Portfolio Website",
+//   description: "A futuristic portfolio showcasing my skills and projects.",
+//   techStack: ["React", "TypeScript", "Tailwind CSS"],
+//   githubLink: "https://github.com/amanshu999/portfolio",
+//   liveLink: "https://myportfolio.com",
+//   status: "completed"
+// }
+//
+// ============================================================

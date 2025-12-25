@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { profileData } from '@/data/profileData';
+import { profile } from '@/data/profile';
 import { NeonText } from './NeonText';
 import { GraduationCap, Briefcase } from 'lucide-react';
 
@@ -57,7 +57,7 @@ export const TimelineSection = () => {
 
           {/* Timeline Items */}
           <div className="space-y-16">
-            {profileData.timeline.map((item, index) => (
+            {profile.timeline.map((item, index) => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}

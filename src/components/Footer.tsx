@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { profileData } from '@/data/profileData';
+import { profile } from '@/data/profile';
 import { Github, Heart } from 'lucide-react';
 
 export const Footer = () => {
@@ -20,7 +20,7 @@ export const Footer = () => {
             className="text-center md:text-left"
           >
             <p className="font-orbitron text-lg font-bold text-gradient mb-2">
-              {profileData.name}
+              {profile.name}
             </p>
             <p className="text-muted-foreground text-sm font-inter">
               © {currentYear} All rights reserved.
@@ -51,7 +51,7 @@ export const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            href={profileData.github}
+            href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}

@@ -8,17 +8,17 @@ import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { CursorGlow } from '@/components/CursorGlow';
 import { Helmet } from 'react-helmet-async';
-import { profileData } from '@/data/profileData';
+import { profile } from '@/data/profile';
 
 const Index = () => {
   return (
     <>
       <Helmet>
-        <title>{profileData.name} | Developer Portfolio</title>
-        <meta name="description" content={`${profileData.name} - ${profileData.taglines[0]}. ${profileData.bio}`} />
-        <meta name="keywords" content={`${profileData.name}, developer, portfolio, ${profileData.skills.map(s => s.name).join(', ')}`} />
-        <meta property="og:title" content={`${profileData.name} | Developer Portfolio`} />
-        <meta property="og:description" content={profileData.bio} />
+        <title>{profile.name} | Developer Portfolio</title>
+        <meta name="description" content={`${profile.name} - ${profile.taglines[0]}. ${profile.bio}`} />
+        <meta name="keywords" content={`${profile.name}, developer, portfolio, ${profile.skills.map(s => s.name).join(', ')}`} />
+        <meta property="og:title" content={`${profile.name} | Developer Portfolio`} />
+        <meta property="og:description" content={profile.bio} />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="/" />
       </Helmet>

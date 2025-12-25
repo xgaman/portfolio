@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { profileData } from '@/data/profileData';
+import { profile } from '@/data/profile';
 import { NeonText } from './NeonText';
 import { NeonButton } from './NeonButton';
 import { GlassCard } from './GlassCard';
@@ -38,10 +38,10 @@ export const ContactSection = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: profileData.github, label: 'GitHub', color: 'hover:text-primary hover:glow-primary' },
-    ...(profileData.linkedin ? [{ icon: Linkedin, href: profileData.linkedin, label: 'LinkedIn', color: 'hover:text-secondary hover:glow-secondary' }] : []),
-    ...(profileData.twitter ? [{ icon: Twitter, href: profileData.twitter, label: 'Twitter', color: 'hover:text-accent hover:glow-accent' }] : []),
-    { icon: Mail, href: `mailto:${profileData.email}`, label: 'Email', color: 'hover:text-tertiary hover:glow-tertiary' },
+    { icon: Github, href: profile.github, label: 'GitHub', color: 'hover:text-primary hover:glow-primary' },
+    ...(profile.linkedin ? [{ icon: Linkedin, href: profile.linkedin, label: 'LinkedIn', color: 'hover:text-secondary hover:glow-secondary' }] : []),
+    ...(profile.twitter ? [{ icon: Twitter, href: profile.twitter, label: 'Twitter', color: 'hover:text-accent hover:glow-accent' }] : []),
+    { icon: Mail, href: `mailto:${profile.email}`, label: 'Email', color: 'hover:text-tertiary hover:glow-tertiary' },
   ];
 
   return (
@@ -177,10 +177,10 @@ export const ContactSection = () => {
                 <div className="flex items-center gap-4 text-muted-foreground">
                   <Mail className="w-5 h-5 text-primary" />
                   <a 
-                    href={`mailto:${profileData.email}`}
+                    href={`mailto:${profile.email}`}
                     className="font-inter hover:text-primary transition-colors duration-300"
                   >
-                    {profileData.email}
+                    {profile.email}
                   </a>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { profileData, Project } from '@/data/profileData';
+import { profile, Project } from '@/data/profile';
 import { GlassCard } from './GlassCard';
 import { NeonText } from './NeonText';
 import { Github, ExternalLink, Clock, Loader } from 'lucide-react';
@@ -122,7 +122,7 @@ export const ProjectsSection = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {profileData.projects.map((project, index) => (
+          {profile.projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
@@ -138,7 +138,7 @@ export const ProjectsSection = () => {
           <p className="text-muted-foreground font-inter">
             More projects coming soon! Check back later or visit my{' '}
             <a 
-              href={profileData.github}
+              href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary-glow transition-colors duration-300 link-glow"
