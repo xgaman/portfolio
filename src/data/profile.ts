@@ -54,7 +54,7 @@ export const profile = {
   experience: "Fresher",
   
   // ✏️ Contact & Social Links
-  email: "contact@example.com",
+  email: "amanshusharma999@gmail.com",
   github: "https://github.com/amanshu999",
   linkedin: "", // Leave empty if not available
   twitter: "",  // Leave empty if not available
