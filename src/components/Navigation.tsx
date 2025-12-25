@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { profileData } from '@/data/profileData';
+import { profile } from '@/data/profile';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -63,7 +63,7 @@ export const Navigation = () => {
               whileHover={{ scale: 1.05 }}
               className="font-orbitron text-xl font-bold text-gradient cursor-pointer"
             >
-              {profileData.firstName.toUpperCase()}
+              {profile.firstName.toUpperCase()}
             </motion.button>
 
             {/* Desktop Navigation */}

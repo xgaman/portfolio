@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { profileData } from '@/data/profileData';
+import { profile } from '@/data/profile';
 import { SkillBar } from './SkillBar';
 import { NeonText } from './NeonText';
 
@@ -43,7 +43,7 @@ export const SkillsSection = () => {
         {/* Skills Grid */}
         <div className="max-w-3xl mx-auto">
           <div className="space-y-8">
-            {profileData.skills.map((skill, index) => (
+            {profile.skills.map((skill, index) => (
               <SkillBar
                 key={skill.name}
                 name={skill.name}
@@ -63,7 +63,7 @@ export const SkillsSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto"
         >
-          {profileData.skills.map((skill, index) => (
+          {profile.skills.map((skill, index) => (
             <motion.div
               key={skill.name}
               initial={{ opacity: 0, scale: 0.8 }}
